@@ -170,7 +170,7 @@ div {
 }
 
 .display {
-  border: solid 3px yellow;
+  border: solid 3px var(--accent2-color);
 }
 
 #cook {
