@@ -6,17 +6,17 @@ const ingredients = [
     },
     {
         image: './pictures/nectar.webp',
-        alt: '',
+        alt: 'nectar',
         name: "nectar"
     },
     {
         image: './pictures/can-o-fire.png',
-        alt: '',
+        alt: 'can-o-fire',
         name: "can-o-fire"
     },
     {
         image: './pictures/bottled-lightning.webp',
-        alt: '',
+        alt: 'bottles-lightning',
         name: "bottled lightning"
     },
     
@@ -25,14 +25,14 @@ const recipes = [
     {
         name: "roast",
         image: './pictures/roast.jpg',
-        alt: '',
+        alt: 'roast',
         ingredients: new Set(["meat"])  ,
         description: "No longer raw! Much tastier! Gain 8 HP."
     },
     {
         name: "meaty meal",
         image: './pictures/meaty-meal.webp',
-        alt: '',
+        alt: 'meaty-meal',
         ingredients: new Set(["meat","meat"], ["meat","roast"], ["roast","roast"])  ,
         description: "Nothing beats meat except more meat! Gain 8 HP and can be used twice!"
     },
@@ -53,7 +53,7 @@ const recipes = [
     {
         name: "mistake",
         image: './pictures/(insert picture here).png',
-        alt: '',
+        alt: 'mistake',
         ingredients: new Set([])  ,
         description: "A loathsome meal. Gain 1 HP, 1 FP, and depresses target."
     },
@@ -132,8 +132,10 @@ function mealMaker(ingredient1,ingredient2) {
     });
 }
 
+
+
 // GLOBAL VARIABLES
-const button = document.getElementById("modal-button");
+const buttons = document.querySelectorAll(".modal-button");
 const removeButton = document.querySelector(".remove");
 const modalBox = document.querySelector(".modal");
 
@@ -142,10 +144,11 @@ var modal = document.getElementById("modalcontent");
 populateModalWithIngredients(modal);
 
 // Modal stuff
-button.addEventListener("click", () => {
-    modalBox.classList.remove("hidden");
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        modalBox.classList.remove("hidden");
+    })
 })
-
 removeButton.addEventListener("click", () => {
     modalBox.classList.add("hidden");
 })

@@ -169,6 +169,10 @@ div {
     align-items: center;
 }
 
+.display {
+  border: solid 3px yellow;
+}
+
 #cook {
   align-self: center;
 }
