@@ -38,21 +38,21 @@ const recipes = [
     },
     {
         name: "glazed meat",
-        image: './pictures/(insert picture here).png',
+        image: './pictures/glazed-meat.jpg',
         alt: '',
         ingredients: new Set(["meat","nectar"])  ,
         description: "Sweet and savory! Heals 5 HP and 5 FP."
     },
     {
         name: "plasma blast",
-        image: './pictures/(insert picture here).png',
+        image: './pictures/plasma-blast.png',
         ingredients: new Set(["can-o-fire","bottled lightning"])  ,
         alt: '',
         description: "Unleash raw energy at your foes! Shoots a beam of fire and lightning elements down three lanes in front of you."
     },
     {
         name: "mistake",
-        image: './pictures/(insert picture here).png',
+        image: './pictures/mistake.webp',
         alt: 'mistake',
         ingredients: new Set([])  ,
         description: "A loathsome meal. Gain 1 HP, 1 FP, and depresses target."
